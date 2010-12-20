@@ -1,0 +1,2 @@
+# ignore machine-specific files (to keep my work config out of this repo, basically).
+vim/plugin/*machine.vim
