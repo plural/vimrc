@@ -15,7 +15,7 @@ set incsearch
 set cul " highlight current line
 
 " 2 line status line.  Example:
-" .vimrc[+] [TYPE=VIM] [POS=0010,0001][76%] [LEN=13]  
+" .vimrc[+] [TYPE=VIM] [POS=0010,0001][76%] [LEN=13]
 " the [+] indicates a modified file.
 set statusline=%f%m%r%h%w\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
@@ -26,6 +26,11 @@ set number
 " highlight columns 81 and 101 in lightgrey
 set colorcolumn=81,101
 hi ColorColumn ctermbg=lightgrey
+
+" highlight evil tabs and trailing whitespace
+highlight EvilWhitespace ctermbg=red guibg=red
+let m1 = matchadd('EvilWhitespace', '\t', -1)
+let m2 = matchadd('EvilWhitespace', '\s\+$', -1)
 
 " FuzzyFinder commands and settings
 let mapleader = ","
