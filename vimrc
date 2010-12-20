@@ -1,21 +1,18 @@
 " vim-mode, not old-school compatible vi mode.
 set nocompatible
 
-" do file-type syntax highlighting
 syntax on
-
-" tabs are 2-space pairs.
 set shiftwidth=2
 set softtabstop=2
-" expand \t characters to equivalent number of spaces.
 set expandtab
 
-" adjust color scheme for dark terminal backround
 set background=dark
 
 " highlight and match search results as you are searching
 set hlsearch
 set incsearch
+
+set cul " highlight current line
 
 " 2 line status line.  Example:
 " .vimrc[+] [TYPE=VIM] [POS=0010,0001][76%] [LEN=13]  
@@ -29,4 +26,10 @@ set number
 " highlight columns 81 and 101 in lightgrey
 set colorcolumn=81,101
 hi ColorColumn ctermbg=lightgrey
-set cul " highlight current line
+
+" FuzzyFinder commands and settings
+let mapleader = ","
+map <Leader>f :FufFile<CR>
+map <Leader>d :FufDir<CR>
+map <Leader>b :FufBuffer<CR>
+let g:fuf_ignoreCase = 1

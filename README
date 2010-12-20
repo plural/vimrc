@@ -1,6 +1,7 @@
 My vim configuration.
 
-After checking out to some directory, link up the vimrc and .vim folders to make this the default configuration.
+After checking out to some directory, link up the vimrc and .vim folders to make
+this the default configuration.
 
-$ ln -s vimrc ~/.vimrc
-$ ln -s viminfo ~/.viminfo
+$ ln -s `pwd`vimrc ~/.vimrc
+$ ln -s `pwd`viminfo ~/.viminfo
