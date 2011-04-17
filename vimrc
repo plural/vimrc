@@ -23,7 +23,7 @@ set laststatus=2
 " turn line numbers on
 set number
 
-if version >= 730
+if version >= 703
   " highlight columns 81 and 101 in lightgrey
   set colorcolumn=81,101
 endif
