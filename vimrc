@@ -23,8 +23,10 @@ set laststatus=2
 " turn line numbers on
 set number
 
-" highlight columns 81 and 101 in lightgrey
-set colorcolumn=81,101
+if version >= 730
+  " highlight columns 81 and 101 in lightgrey
+  set colorcolumn=81,101
+endif
 hi ColorColumn ctermbg=lightgrey
 
 " highlight evil tabs and trailing whitespace
